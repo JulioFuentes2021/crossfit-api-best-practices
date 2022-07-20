@@ -6,11 +6,15 @@ const {
     createNewWorkout,
     updateOneWorkout,
     deleteOneWorkout,
+
 } = require("../../controllers/workoutController");
+const { getRecordForWorkoutTest } = require("../../controllers/recordController");
 
 router.get("/", getAllWorkouts);
 
 router.get("/:workoutId", getOneWorkout);
+
+router.get("/:workoutId/records", getRecordForWorkoutTest);
 
 router.post("/", createNewWorkout);
 
